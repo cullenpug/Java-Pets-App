@@ -17,7 +17,7 @@
 <body>
 		<div class="container">
 	<nav class="navbar navbar-expand-lg bg-body-tertiary"
-			style="color: rebeccapurple">
+			style="color: #6610f2">
 			<div class="container-fluid">
 				<h1>Pets App Tracker!</h1>
 				<button class="navbar-toggler" type="button"
@@ -66,7 +66,7 @@
 				<form:errors path="happiness" class="text-danger" />
 				<form:input type="number" path="happiness" />
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-outline-success">Submit</button>
 		</form:form>
 		
 	</div>

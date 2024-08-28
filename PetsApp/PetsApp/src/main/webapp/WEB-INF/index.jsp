@@ -17,7 +17,7 @@
 <body>
 	<div class="mx-auto">
 		<div class="my-5 text-center">
-			<h1>
+			<h1 style="color: #0dcaf0">
 				Welcome to<br> Pets App Tracker! <br>
 			</h1>
 		</div>
@@ -46,7 +46,7 @@
 						<form:input type="password" path="confirm" />
 					</div>
 					<div>
-						<input class="btn btn-info" type="submit" value="Submit">
+						<input class="btn btn-outline-info" type="submit" value="Submit">
 					</div>
 				</form:form>
 			</div>
@@ -64,7 +64,7 @@
 						<form:input type="password" path="password" />
 					</div>
 					<div>
-						<input class="btn btn-info" type="submit" value="Submit">
+						<input class="btn btn-outline-success" type="submit" value="Submit">
 					</div>
 				</form:form>
 			</div>

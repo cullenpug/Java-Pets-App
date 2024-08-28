@@ -93,14 +93,16 @@ public class PetController {
 		@PutMapping("/pets/{id}/edit")
 		public String updatePet(@Valid @ModelAttribute("pet") Pet pet, BindingResult result, HttpSession session, Model model,@PathVariable("id")Long id) {
 			Long userId = (Long) session.getAttribute("userId");
-			if(userId == null) {
+			// check if pet owner / pull the original pet from the databpase
+			Pet originalPet = petService.findPet(id);
+			if(userId == null || userId != originalPet.getUser().getId()) {
 				return "redirect:/";
 			}
 			//If submitted edit form has errors reset the pre-populated form
 			if(result.hasErrors()) {
-				//pet.setId(id);
-				//model.addAttribute("pet", pet);
-				model.addAttribute("pet", petService.findPet(id));
+				pet.setId(id);
+				model.addAttribute("pet", pet);
+				//model.addAttribute("pet", petService.findPet(id));
 				return "edit.jsp";
 			}
 			else {

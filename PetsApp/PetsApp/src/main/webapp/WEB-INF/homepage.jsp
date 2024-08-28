@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<nav class="navbar navbar-expand-lg bg-body-tertiary"
-			style="color: rebeccapurple">
+			style="color: #6610f2">
 			<div class="container-fluid">
 				<h1>Pets App Tracker!</h1>
 				<button class="navbar-toggler" type="button"
@@ -78,7 +78,7 @@
 			</tbody>
 		</table>
 		<div class="d-grid gap-2">
-			<a class="btn btn-outline-primary" href="/pets/new">Add a friend</a>
+			<a class="btn btn-outline-success" href="/pets/new">Add a friend</a>
 		</div>
 	</div>
 </body>

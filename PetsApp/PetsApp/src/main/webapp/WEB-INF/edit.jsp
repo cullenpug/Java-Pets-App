@@ -15,10 +15,9 @@
 <title>Edit <c:out value="${pet.petName}"></c:out></title>
 </head>
 <body>
-	<c:if test="${userId == pet.user.id}">
 	<div class="container">
-	<nav class="navbar navbar-expand-lg bg-body-tertiary"
-			style="color: rebeccapurple">
+		<nav class="navbar navbar-expand-lg bg-body-tertiary"
+			style="color: #6610f2">
 			<div class="container-fluid">
 				<h1>Pets App Tracker!</h1>
 				<button class="navbar-toggler" type="button"
@@ -30,15 +29,18 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page"  href="/homepage" >Home</a></li>
-						<li class="nav-item"><a class="nav-link"  href="/pets/new"  >Create</a></li>
-						<li class="nav-item"><a class="nav-link"  href="/logout" >Logout</a>
+							aria-current="page" href="/homepage">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="/pets/new">Create</a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<h2>Edit <c:out value="${pet.petName}"></c:out></h2>
+		<h2>
+			Edit
+			<c:out value="${pet.petName}"></c:out>
+		</h2>
 		<form:form action="/pets/${id}/edit" method="PUT" modelAttribute="pet">
 			<div class="mb-3">
 				<form:label path="petName">Name:</form:label>
@@ -55,7 +57,7 @@
 				<form:label path="type">Type:</form:label>
 				<form:errors path="type" class="text-danger" />
 				<form:input type="text" path="type" />
-				
+
 			</div>
 			<div class="mb-3">
 				<form:label path="health">Health:</form:label>
@@ -69,9 +71,7 @@
 			</div>
 			<input type="hidden" value="put" name="_method" />
 			<button type="submit" class="btn btn-outline-warning">Submit</button>
-		</form:form>	
+		</form:form>
 	</div>
-	<</c:if> 
-
 </body>
 </html>
